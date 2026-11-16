@@ -22,7 +22,7 @@ Die Jupyter-Notebooks dienen der Durchführung der Berechnungen und der Erstellu
 
 ## 3. Voraussetzungen
 
-Für die Ausführung wird Python benötigt. Die verwendeten Python-Bibliotheken und deren Versionen sind in `requirements.txt` dokumentiert.
+Für die Ausführung wird Python 3.14 benötigt. Die verwendeten Python-Bibliotheken und deren Versionen sind in `requirements.txt` dokumentiert.
 
 Die Abhängigkeiten können mit folgendem Befehl installiert werden:
 ```bash
