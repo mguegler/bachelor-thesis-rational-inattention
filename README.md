@@ -13,7 +13,6 @@ Dazu wird ein dynamisches Rational-Inattention-Modell mit zwei Produkten in jewe
 ## 2. Projektstruktur
 
 Die zentralen Python-Dateien sind:
-
 - **`modell_parameter.py`** – Definition und Validierung der Modellparameter sowie Festlegung der Parameterraster für die Abbildungen.
 - **`modell_konsument.py`** – Numerische Lösung des dynamischen Rational-Inattention-Modells.
 - **`modell_anbieter.py`** – Berechnung gewinnbezogener Kennzahlen.
@@ -25,17 +24,25 @@ Die Jupyter-Notebooks dienen der Durchführung der Berechnungen und der Erstellu
 
 Für die Ausführung wird Python benötigt. Die verwendeten Python-Bibliotheken und deren Versionen sind in `requirements.txt` dokumentiert.
 
+Die Abhängigkeiten können mit folgendem Befehl installiert werden:
+```bash
+python -m pip install -r requirements.txt
+```
+
 ## 4. Reproduktion der Ergebnisse
 
-Die numerische Analyse erfolgt in drei Schritten:
+Die Notebooks befinden sich im selben Verzeichnis wie die Python-Dateien und werden in folgender Reihenfolge ausgeführt:
+1. **`modellanalyse.ipynb`**
+2. **`anhang.ipynb`**
 
-1. **Modelllösung:** Berechnung der stationären Lösung für die betrachteten Parameterkombinationen.
-2. **Auswertung:** Bestimmung der Wahlwahrscheinlichkeiten, der zusätzlichen Informationsverarbeitung, der Bindungsprämie und der Anbieterergebnisse.
-3. **Darstellung und Validierung:** Erstellung der Abbildungen und Tabellen sowie Durchführung der Robustheits- und Plausibilitätsprüfungen.
+Dadurch werden folgende Ordner erstellt:
+- **`resultate/`** – Zwischengespeicherte Modellergebnisse und Solver-Diagnosen.
+- **`abbildungen/`** – Abbildungen als PDF.
+- **`tabellen_anhang/`** – Robustheitstabellen als CSV.
 
 Die verwendete Baseline-Parametrisierung, die numerischen Einstellungen und die untersuchten Parameterbereiche sind in der Bachelorarbeit dokumentiert.
 
-Da die vollständigen Berechnungen rechenintensiv sein können, werden Ergebnisse und Zwischenergebnisse gespeichert. Dadurch kann die Ausführung bei Bedarf unterbrochen und später fortgesetzt werden. Zudem lassen sich Abbildungen nachträglich anpassen.
+Da die vollständigen Berechnungen rechenintensiv sein können, werden die berechneten Ergebnisse zwischengespeichert. Dadurch kann die Ausführung bei Bedarf unterbrochen und später fortgesetzt werden. Zudem lassen sich Abbildungen nachträglich anpassen.
 
 ## 5. Hinweise
 
